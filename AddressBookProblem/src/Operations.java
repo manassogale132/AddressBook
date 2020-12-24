@@ -42,15 +42,6 @@ public class Operations{
 		
 	}
 	
-	public void viewInformation() {                                         //Get users Method
-		
-		for(int i = 0 ; i < person.size() ; i++) {
-			System.out.println(" ");
-			System.out.println(person.get(i));
-			System.out.println(" ");
-		}
-		
-	}
 
 	
 }
