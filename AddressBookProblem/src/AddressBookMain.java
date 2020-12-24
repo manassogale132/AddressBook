@@ -11,7 +11,6 @@ public class AddressBookMain {
 		System.out.println("------------------------------------------------");
 		System.out.println(" ");
 		System.out.println("1. Add User(s) Information .");
-		System.out.println("2. View User(s) Information .");
 		System.out.println(" ");
 		System.out.println("------------------------------------------------");
 	
