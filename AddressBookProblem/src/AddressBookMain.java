@@ -17,6 +17,7 @@ public class AddressBookMain {
 		System.out.println("5. Delete Information by First-Name .");
 		System.out.println("6. Sort Information by First-Name .");
 		System.out.println("7. Sort Information by State .");
+		System.out.println("8. Edit Information by First-Name .");
 		System.out.println(" ");
 		System.out.println("------------------------------------------------");
 	
@@ -69,9 +70,15 @@ public class AddressBookMain {
 			operations.sortByState();
 			System.out.println("---");
 			break;
+		
+		case 8:
+			System.out.println("---");
+			operations.editInformation();
+			System.out.println("---");
+			break;
 			
 		}
-		}while(option != 7);
+		}while(option != 8);
 
 	}
 
