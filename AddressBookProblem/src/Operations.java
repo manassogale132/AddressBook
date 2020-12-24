@@ -106,27 +106,4 @@ public class Operations{
 		}	
 	}
 	
-	public void sortByFirstName() {                                              //Sort by First-Name Method
-		
-		Collections.sort(person, new Comparator<Person>(){
-		
-		    public int compare(Person oneName ,Person twoName) {
-			    return String.valueOf(oneName.firstName).compareTo(twoName.firstName);
-		    }
-	    });
-		
-		System.out.println("Sorted by First-Name Alphabetically-");
-		
-		for(int i = 0 ; i < person.size() ; i++) {
-			System.out.println(" ");
-			System.out.println(person.get(i));
-			System.out.println(" ");
-		}
-	}
-
-	
-	
-	
-	
-
 }
