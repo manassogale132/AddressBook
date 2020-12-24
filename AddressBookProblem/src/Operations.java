@@ -142,8 +142,7 @@ public void sortByState() {                                                  //S
 		}
 	}
 	
-	
-	
+		
 	
 
 }
