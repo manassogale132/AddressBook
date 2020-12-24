@@ -70,23 +70,7 @@ public class Operations{
 			}				
 	}
 	
-	public void searchInformationByState() {                                       //Search by State Method
-		
-		System.out.println("*Enter State to search records-");
-		String state = scan.nextLine();
-		
-		if(person.isEmpty()) {
-			System.out.println("No such record found.");
-		}
-		
-		for(int i = 0 ; i < person.size() ; i++) {
-			if(person.get(i).getState().equals(state)) {
-				
-				System.out.println(" ");
-				System.out.println(person.get(i));		
-			}
-		}				
-}
+
 	
 	
 }
