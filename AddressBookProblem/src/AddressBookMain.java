@@ -16,7 +16,6 @@ public class AddressBookMain {
 		System.out.println("4. Search Information by State .");
 		System.out.println("5. Delete Information by First-Name .");
 		System.out.println("6. Sort Information by First-Name .");
-		System.out.println("7. Sort Information by State .");
 		System.out.println(" ");
 		System.out.println("------------------------------------------------");
 	
