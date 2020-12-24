@@ -64,14 +64,8 @@ public class AddressBookMain {
 			System.out.println("---");
 			break;
 			
-		case 7:
-			System.out.println("---");
-			operations.sortByState();
-			System.out.println("---");
-			break;
-			
-		}
-		}while(option != 7);
+	
+		}while(option != 6);
 
 	}
 
