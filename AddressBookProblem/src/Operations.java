@@ -124,7 +124,7 @@ public class Operations{
 		}
 	}
 		
-public void sortByState() {                                                  //Sort by State Method
+       public void sortByState() {                                                  //Sort by State Method
 		
 		Collections.sort(person, new Comparator<Person>(){
 		
@@ -141,6 +141,44 @@ public void sortByState() {                                                  //S
 			System.out.println(" ");
 		}
 	}
+	
+	
+	public void editInformation() {                                                //Edit Information Method 
+    	
+    	System.out.println("Enter First-Name to edit record-");
+    	String fNameToUpdate = scan.nextLine();
+    	
+    	for(int i = 0 ; i < person.size() ; i++) {
+    		
+    		if(person.get(i).getFirstName().equals(fNameToUpdate)) {
+    	
+    	Person personInfo = new Person();
+    	
+    	System.out.println("Enter First-Name -");
+		personInfo.setFirstName(scan.nextLine());
+		
+		System.out.println("Enter Last-Name -");
+		personInfo.setLastName(scan.nextLine());
+		
+		System.out.println("Enter Address -");
+		personInfo.setAddress(scan.nextLine());
+		
+		System.out.println("Enter State -");
+		personInfo.setState(scan.nextLine());
+		
+		System.out.println("Enter City -");
+		personInfo.setCity(scan.nextLine());
+		
+		System.out.println("Enter Zip-Code -");
+		personInfo.setZipCode(scan.nextLine());
+		
+		System.out.println("Enter Phone-Number -");
+		personInfo.setPhoneNumber(scan.nextLine());
+		
+		person.set(i, personInfo);
+    }
+    	}
+    }
 	
 	
 	
