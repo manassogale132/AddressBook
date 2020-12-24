@@ -123,24 +123,7 @@ public class Operations{
 			System.out.println(" ");
 		}
 	}
-		
-public void sortByState() {                                                  //Sort by State Method
-		
-		Collections.sort(person, new Comparator<Person>(){
-		
-		    public int compare(Person oneState ,Person twoState) {
-			    return String.valueOf(oneState.state).compareTo(twoState.state);
-		    }
-	    });
-		
-		System.out.println("Sorted by State Alphabetically-");
-		
-		for(int i = 0 ; i < person.size() ; i++) {
-			System.out.println(" ");
-			System.out.println(person.get(i));
-			System.out.println(" ");
-		}
-	}
+
 	
 	
 	
