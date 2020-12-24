@@ -88,22 +88,5 @@ public class Operations{
 		}				
 }
 	
-	public void deleteInformationByFirstName() {                                     //Delete record by First-Name
-		
-		System.out.println("*Enter First-Name to delete from records-");
-		String fName = scan.nextLine();
-		
-		if(person.isEmpty()) {
-			System.out.println("No such record found to delete.");
-		}
-		
-		for(int i = 0 ; i < person.size() ; i++) {
-			if(person.get(i).getFirstName().equals(fName)) {
-				
-				person.remove(i);
-				System.out.println("--Record Deleted--");
-			}		
-		}	
-	}
 	
 }
