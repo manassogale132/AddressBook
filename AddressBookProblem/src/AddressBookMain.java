@@ -28,15 +28,10 @@ public class AddressBookMain {
 			operations.addInformation();
 			System.out.println("---");
 			break;
-			
-		case 2:
-			System.out.println("---");
-			operations.viewInformation();
-			System.out.println("---");
-			break;
+	
 			
 	
-		}while(option != 2);
+		}while(option != 1);
 
 	}
 
