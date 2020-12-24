@@ -51,59 +51,6 @@ public class Operations{
 		}
 		
 	}
-	
-	public void searchInformationByCity() {                                       //Search by City Method
-		
-			System.out.println("*Enter City to search records-");
-			String city = scan.nextLine();
-			
-			if(person.isEmpty()) {
-				System.out.println("No such record found.");
-			}
-			
-			for(int i = 0 ; i < person.size() ; i++) {
-				if(person.get(i).getCity().equals(city)) {
-					
-					System.out.println(" ");
-					System.out.println(person.get(i));		
-				}
-			}				
-	}
-	
-	public void searchInformationByState() {                                       //Search by State Method
-		
-		System.out.println("*Enter State to search records-");
-		String state = scan.nextLine();
-		
-		if(person.isEmpty()) {
-			System.out.println("No such record found.");
-		}
-		
-		for(int i = 0 ; i < person.size() ; i++) {
-			if(person.get(i).getState().equals(state)) {
-				
-				System.out.println(" ");
-				System.out.println(person.get(i));		
-			}
-		}				
-}
-	
-	public void deleteInformationByFirstName() {                                     //Delete record by First-Name
-		
-		System.out.println("*Enter First-Name to delete from records-");
-		String fName = scan.nextLine();
-		
-		if(person.isEmpty()) {
-			System.out.println("No such record found to delete.");
-		}
-		
-		for(int i = 0 ; i < person.size() ; i++) {
-			if(person.get(i).getFirstName().equals(fName)) {
-				
-				person.remove(i);
-				System.out.println("--Record Deleted--");
-			}		
-		}	
-	}
+
 	
 }
