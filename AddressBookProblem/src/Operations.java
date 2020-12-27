@@ -197,5 +197,13 @@ public class Operations{
     	
     }
     
+    
+   public void sortStreamByCity() {  
+    	
+    	Stream<Person> person1 = person.stream().sorted(Comparator.comparing(Person::getCity));       //sorted() method is use to sort the list-stream in stream 
+    	                                                                                              //Comparator is passed in sorted() method itself.
+    	person1.forEach(System.out::println);
+    	
+    }
    
 }
