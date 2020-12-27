@@ -84,15 +84,9 @@ public class AddressBookMain {
                         operations.sortStreamByFirstName();
 			System.out.println("---");
 			break;
-			
-		case 10:
-			System.out.println(" ");
-                        operations.sortStreamByCity();
-			System.out.println("---");
-			break;
-			
+	
 		}
-		}while(option != 10);
+		}while(option != 9);
 
 	}
 
