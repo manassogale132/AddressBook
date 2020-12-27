@@ -33,12 +33,11 @@ public class Operations{
 		
 		System.out.println("Enter Phone-Number -");
 		personInfo.setPhoneNumber(scan.nextLine());
-		
-	
-		person.add(personInfo);
-		
-		System.out.println(" ");
-		System.out.println("--Information Stored--");
+	        System.out.println(" ");
+		person.add(personInfo);	    
+	    
+	        person=person.stream().distinct().collect(Collectors.toList());    //Stream to reject data with same First&Last Name.
+	    
 		
 	}
 	
