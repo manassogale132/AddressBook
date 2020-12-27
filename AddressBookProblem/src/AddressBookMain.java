@@ -19,7 +19,6 @@ public class AddressBookMain {
 		System.out.println("7 . Sort Information by State.");
 		System.out.println("8 . Edit Information by First-Name.");
 		System.out.println("9 . *Using Stream,Sort Information by First-Name.");
-		System.out.println("10. *Using Stream,Sort Information by City.");
 		System.out.println(" ");
 		System.out.println("------------------------------------------------");
 	
