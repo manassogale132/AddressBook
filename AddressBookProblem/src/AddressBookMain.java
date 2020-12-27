@@ -10,14 +10,14 @@ public class AddressBookMain {
 		System.out.println("---Address Book Program---");
 		System.out.println("------------------------------------------------");
 		System.out.println(" ");
-		System.out.println("1. Add User(s) Information .");
-		System.out.println("2. View User(s) Information .");
-		System.out.println("3. Search Information by City .");
-		System.out.println("4. Search Information by State .");
-		System.out.println("5. Delete Information by First-Name .");
-		System.out.println("6. Sort Information by First-Name .");
-		System.out.println("7. Sort Information by State .");
-		System.out.println("8. Edit Information by First-Name .");
+		System.out.println("1. Add User(s) Information.(Duplicate First&Last name is not added in ArrayList)");
+		System.out.println("2. View User(s) Information.");
+		System.out.println("3. Search Information by City.");
+		System.out.println("4. Search Information by State.");
+		System.out.println("5. Delete Information by First-Name.");
+		System.out.println("6. Sort Information by First-Name.");
+		System.out.println("7. Sort Information by State.");
+		System.out.println("8. Edit Information by First-Name.");
 		System.out.println(" ");
 		System.out.println("------------------------------------------------");
 	
@@ -70,7 +70,7 @@ public class AddressBookMain {
 			operations.sortByState();
 			System.out.println("---");
 			break;
-		
+			
 		case 8:
 			System.out.println("---");
 			operations.editInformation();
