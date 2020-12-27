@@ -1,13 +1,20 @@
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.Comparator;
+import java.util.List;
 import java.util.Scanner;
+import java.util.function.Predicate;
+import java.util.stream.Collectors;
+import java.util.stream.Stream;
+
+import javax.swing.event.ListSelectionEvent;
 
 public class Operations{
 	
-	ArrayList<Person> person = new ArrayList<>();
+	List<Person> person = new ArrayList<>();
 	
 	Scanner scan = new Scanner(System.in); 
+	
 	
 	public void addInformation() {                                  //Add users Method
 		
@@ -33,13 +40,15 @@ public class Operations{
 		
 		System.out.println("Enter Phone-Number -");
 		personInfo.setPhoneNumber(scan.nextLine());
-	        System.out.println(" ");
-		person.add(personInfo);	    
-	    
-	        person=person.stream().distinct().collect(Collectors.toList());    //Stream to reject data with same First&Last Name.
-	    
 		
-	}
+		System.out.println(" ");
+	
+	    person.add(personInfo);	    
+	    
+	    person=person.stream().distinct().collect(Collectors.toList());    //Stream to reject data with same First&Last Name.
+	                                                                       //distinct() gives all the distinct elements from the stream
+	                                                                       //distinct() uses hashCode() and equals() methods in Person.class
+	} 
 	
 	public void viewInformation() {                                         //Get users Method
 		
@@ -53,7 +62,7 @@ public class Operations{
 	
 	public void searchInformationByCity() {                                       //Search by City Method
 		
-			System.out.println("*Enter City to search records-");
+			System.out.println("**Enter City to search records**");
 			String city = scan.nextLine();
 			
 			if(person.isEmpty()) {
@@ -71,7 +80,7 @@ public class Operations{
 	
 	public void searchInformationByState() {                                       //Search by State Method
 		
-		System.out.println("*Enter State to search records-");
+		System.out.println("**Enter State to search records**");
 		String state = scan.nextLine();
 		
 		if(person.isEmpty()) {
@@ -89,7 +98,7 @@ public class Operations{
 	
 	public void deleteInformationByFirstName() {                                     //Delete record by First-Name
 		
-		System.out.println("*Enter First-Name to delete from records-");
+		System.out.println("**Enter First-Name to delete from records**");
 		String fName = scan.nextLine();
 		
 		if(person.isEmpty()) {
@@ -107,14 +116,14 @@ public class Operations{
 	
 	public void sortByFirstName() {                                              //Sort by First-Name Method
 		
-		Collections.sort(person, new Comparator<Person>(){
+		Collections.sort(person, new Comparator<Person>(){                  //Collection and Comparator class
 		
 		    public int compare(Person oneName ,Person twoName) {
 			    return String.valueOf(oneName.firstName).compareTo(twoName.firstName);
 		    }
 	    });
 		
-		System.out.println("Sorted by First-Name Alphabetically-");
+		System.out.println("**Sorted by First-Name Alphabetically**");
 		
 		for(int i = 0 ; i < person.size() ; i++) {
 			System.out.println(" ");
@@ -123,10 +132,10 @@ public class Operations{
 		}
 	}
 		
-       public void sortByState() {                                                  //Sort by State Method
+    public void sortByState() {                                                  //Sort by State Method
 		
-		Collections.sort(person, new Comparator<Person>(){
-		
+		Collections.sort(person, new Comparator<Person>(){                      //Collection and Comparator class
+		 
 		    public int compare(Person oneState ,Person twoState) {
 			    return String.valueOf(oneState.state).compareTo(twoState.state);
 		    }
@@ -139,10 +148,10 @@ public class Operations{
 			System.out.println(person.get(i));
 			System.out.println(" ");
 		}
-	}
-	
-	
-	public void editInformation() {                                                //Edit Information Method 
+	 }
+
+
+    public void editInformation() {                                                //Edit Information Method 
     	
     	System.out.println("Enter First-Name to edit record-");
     	String fNameToUpdate = scan.nextLine();
@@ -178,9 +187,15 @@ public class Operations{
     }
     	}
     }
-	
-	
-	
-	
-
+   
+    
+    public void sortStreamByFirstName() {  
+    	
+    	Stream<Person> person1 = person.stream().sorted(Comparator.comparing(Person::getFirstName));  //sorted() method is use to sort the list-stream in stream 
+    	                                                                                              //Comparator is passed in sorted() method itself.
+    	person1.forEach(System.out::println);
+    	
+    }
+    
+   
 }
