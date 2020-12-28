@@ -205,5 +205,18 @@ public class Operations{
     	person1.forEach(System.out::println);
     	
     }
+	
+	
+	public void searchStreamByFirstName() {
+	   
+	   System.out.println("**Enter First-Name to search records**");
+	   String firstName = scan.nextLine();
+	   
+	   
+	   Stream<Person> matchedFirstName = person.stream().filter(p -> p.getFirstName().equals(firstName));  //filter() is use to pass lambda expression to search by FirstName.
+	   
+	   matchedFirstName.forEach(System.out::println);
+	   
+   }
    
 }
