@@ -20,6 +20,7 @@ public class AddressBookMain {
 		System.out.println("8 . Edit Information by First-Name.");
 		System.out.println("9 . *Using Stream,Sort Information by First-Name.");
 		System.out.println("10. *Using Stream,Sort Information by City.");
+		System.out.println("11. *Using Stream,Search Information by First-Name.");
 		System.out.println(" ");
 		System.out.println("------------------------------------------------");
 	
@@ -90,9 +91,15 @@ public class AddressBookMain {
                         operations.sortStreamByCity();
 			System.out.println("---");
 			break;
+				
+		case 11:
+			System.out.println(" ");
+			operations.searchStreamByFirstName();
+			System.out.println("---");
+			break;
 			
 		}
-		}while(option != 10);
+		}while(option != 11);
 
 	}
 
